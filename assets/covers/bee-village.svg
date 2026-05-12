@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" aria-label="A winding road climbing into the Sahyadri hills, hand-painted village sign for Manghar, stacks of bee boxes by the roadside">
+    <rect width="800" height="460" fill="#9DB39A"></rect>
+    <!-- distant ridge -->
+    <path d="M0 220 L80 180 L160 200 L240 160 L340 195 L440 155 L540 195 L640 165 L740 200 L800 180 L800 280 L0 280 Z" fill="#8A9978" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+    <!-- sun -->
+    <circle cx="640" cy="80" r="38" fill="#D4B86A" stroke="#1A1A1A" stroke-width="3"></circle>
+    <line x1="640" y1="20" x2="640" y2="32" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"></line>
+    <line x1="690" y1="50" x2="680" y2="58" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"></line>
+    <line x1="700" y1="80" x2="688" y2="80" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"></line>
+    <line x1="580" y1="80" x2="592" y2="80" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"></line>
+    <line x1="590" y1="50" x2="600" y2="58" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"></line>
+    <!-- nearer hills -->
+    <path d="M0 320 L100 260 L220 300 L360 240 L500 290 L640 250 L800 295 L800 400 L0 400 Z" fill="#6FAEA8" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round"></path>
+    <!-- road -->
+    <path d="M-20 460 Q 200 380 380 380 Q 560 380 640 320 Q 700 280 800 270" fill="none" stroke="#1A1A1A" stroke-width="42" stroke-linecap="round"></path>
+    <path d="M-20 460 Q 200 380 380 380 Q 560 380 640 320 Q 700 280 800 270" fill="none" stroke="#C6A27A" stroke-width="34" stroke-linecap="round"></path>
+    <path d="M-20 460 Q 200 380 380 380 Q 560 380 640 320 Q 700 280 800 270" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="14 18" stroke-linecap="round"></path>
+    <!-- village sign post -->
+    <g transform="translate(110,290)">
+      <line x1="0" y1="0" x2="0" y2="80" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"></line>
+      <rect x="-50" y="-30" width="140" height="44" fill="#F5EFE4" stroke="#1A1A1A" stroke-width="3"></rect>
+      <text x="20" y="0" text-anchor="middle" font-family="Archivo Black" font-size="14" fill="#1A1A1A">MANGHAR</text>
+      <text x="20" y="11" text-anchor="middle" font-family="Caveat" font-size="11" fill="#1A1A1A">India's first Honey Village →</text>
+    </g>
+    <!-- bee boxes stacked by roadside -->
+    <g transform="translate(540,340)">
+      <rect x="0" y="0" width="60" height="20" fill="#C6A27A" stroke="#1A1A1A" stroke-width="2.5"></rect>
+      <line x1="0" y1="10" x2="60" y2="10" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <circle cx="30" cy="16" r="2.5" fill="#1A1A1A"></circle>
+      <rect x="-4" y="-22" width="60" height="20" fill="#C6A27A" stroke="#1A1A1A" stroke-width="2.5"></rect>
+      <line x1="-4" y1="-12" x2="56" y2="-12" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <circle cx="26" cy="-6" r="2.5" fill="#1A1A1A"></circle>
+      <rect x="2" y="-44" width="60" height="20" fill="#C6A27A" stroke="#1A1A1A" stroke-width="2.5"></rect>
+      <line x1="2" y1="-34" x2="62" y2="-34" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <circle cx="32" cy="-28" r="2.5" fill="#1A1A1A"></circle>
+    </g>
+    <!-- bees -->
+    <g transform="translate(420,180)">
+      <ellipse cx="0" cy="0" rx="10" ry="6" fill="#D4B86A" stroke="#1A1A1A" stroke-width="1.5"></ellipse>
+      <line x1="-4" y1="-5" x2="-4" y2="5" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <line x1="4" y1="-5" x2="4" y2="5" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <ellipse cx="-5" cy="-6" rx="6" ry="3" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"></ellipse>
+      <ellipse cx="5" cy="-6" rx="6" ry="3" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"></ellipse>
+    </g>
+    <g transform="translate(360,150) scale(0.8)">
+      <ellipse cx="0" cy="0" rx="10" ry="6" fill="#D4B86A" stroke="#1A1A1A" stroke-width="1.5"></ellipse>
+      <line x1="-4" y1="-5" x2="-4" y2="5" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <line x1="4" y1="-5" x2="4" y2="5" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <ellipse cx="-5" cy="-6" rx="6" ry="3" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"></ellipse>
+      <ellipse cx="5" cy="-6" rx="6" ry="3" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1"></ellipse>
+    </g>
+    <path d="M340 165 Q380 140 420 175" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-dasharray="3 4"></path>
+    <!-- goats by sign -->
+    <g transform="translate(220,360)">
+      <ellipse cx="0" cy="0" rx="18" ry="9" fill="#F5EFE4" stroke="#1A1A1A" stroke-width="2"></ellipse>
+      <circle cx="16" cy="-4" r="6" fill="#F5EFE4" stroke="#1A1A1A" stroke-width="2"></circle>
+      <path d="M20 -8 L23 -14 M14 -8 L11 -14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></path>
+      <line x1="-8" y1="8" x2="-8" y2="14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="8" y1="8" x2="8" y2="14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></line>
+      <circle cx="17" cy="-5" r="0.8" fill="#1A1A1A"></circle>
+    </g>
+    <!-- wordmark -->
+    <g transform="translate(28,438)">
+      <rect x="-4" y="-18" width="148" height="24" fill="#C7E34A" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="70" y="-1" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="16" fill="#1A1A1A">TRUTH BE TOLD</text>
+    </g>
+  </svg>

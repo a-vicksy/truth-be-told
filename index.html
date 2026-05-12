@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truth Be Told</title>
+  <meta name="description" content="Truth Be Told — essays on food, labels, and what we really put on our plates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #1f1f1f;
+      --ink-soft: #4a4a4a;
+      --muted: #767676;
+      --line: #e5e5e5;
+      --accent: #B0203C;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ---------- Top bar ---------- */
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 28px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-link { display: inline-flex; align-items: center; }
+    .logo-img {
+      width: 56px;
+      height: 56px;
+      display: block;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .brand {
+      font-family: var(--sans);
+      font-weight: 900;
+      font-size: 30px;
+      letter-spacing: -0.6px;
+      text-align: center;
+      color: var(--ink);
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+    }
+    .icon-btn {
+      width: 36px; height: 36px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 8px;
+      color: var(--ink);
+      cursor: pointer;
+      transition: background .15s ease;
+    }
+    .icon-btn:hover { background: #f3f3f3; }
+    .icon-btn svg { width: 20px; height: 20px; }
+    .subscribe-btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 14px;
+      transition: opacity .15s ease;
+    }
+    .subscribe-btn:hover { opacity: 0.92; }
+    .signin {
+      font-family: var(--sans);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .signin:hover { color: var(--accent); }
+
+    /* ---------- Primary nav ---------- */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 14px 0 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .nav a {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--ink);
+      padding-bottom: 14px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav a.active { border-bottom-color: var(--ink); font-weight: 700; }
+    .nav a:hover { color: var(--accent); }
+
+    /* ---------- Layout ---------- */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 28px 64px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ---------- Cards ---------- */
+    .card { display: block; }
+    .card a { display: block; }
+    .card-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #f5f5f5;
+    }
+    .card-image svg { width: 100%; height: 100%; display: block; }
+    .card-body { padding-top: 16px; }
+    .card-title {
+      font-family: var(--sans);
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-family: var(--sans);
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-meta {
+      font-family: var(--sans);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .card-meta .dot { margin: 0 6px; }
+    .card a:hover .card-title { color: var(--accent); }
+
+    /* ---------- Footer ---------- */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px;
+      text-align: center;
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a { color: var(--accent); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    }
+    @media (max-width: 640px) {
+      .topbar { grid-template-columns: auto 1fr auto; padding: 12px 16px; }
+      .brand { font-size: 22px; }
+      .signin { display: none; }
+      .icon-btn:nth-of-type(2) { display: none; }
+      .logo-img { width: 44px; height: 44px; }
+      .container { padding: 24px 16px 48px; }
+      .grid { grid-template-columns: 1fr; gap: 36px; }
+      .card-title { font-size: 20px; }
+      .nav { gap: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="topbar">
+      <a class="logo-link" href="/" aria-label="Truth Be Told home">
+        <img class="logo-img" src="assets/logo.png" alt="Truth Be Told" />
+      </a>
+      <div class="brand">Truth Be Told</div>
+      <div class="top-actions">
+        <span class="icon-btn" title="Search" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <span class="icon-btn" title="Share" aria-label="Share">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        </span>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+        <a href="#" class="signin">Sign in</a>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#" class="active">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+
+      <!-- 1: The Mouli and the Tiger -->
+      <article class="card">
+        <a href="articles/the-mouli-and-the-tiger.html">
+          <div class="card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="250" fill="#1a3a2e"/>
+              <circle cx="325" cy="50" r="22" fill="#f4d35e"/>
+              <circle cx="318" cy="46" r="19" fill="#1a3a2e"/>
+              <path d="M0 200 Q30 160 60 200 Q90 165 120 200 Q150 160 180 200 Q210 168 240 200 Q270 158 300 200 Q330 172 360 200 Q380 175 400 200 L400 250 L0 250 Z" fill="#0d2820"/>
+              <path d="M0 220 Q40 195 80 220 Q120 200 160 222 L160 250 L0 250 Z" fill="#061a13"/>
+              <path d="M280 222 Q320 195 360 220 Q380 205 400 220 L400 250 L280 250 Z" fill="#061a13"/>
+              <g transform="translate(200,140)">
+                <path d="M-58 -42 L-46 -65 L-32 -45 Z" fill="#ea580c" stroke="#1a1208" stroke-width="2"/>
+                <path d="M58 -42 L46 -65 L32 -45 Z" fill="#ea580c" stroke="#1a1208" stroke-width="2"/>
+                <ellipse cx="0" cy="0" rx="66" ry="52" fill="#f97316" stroke="#1a1208" stroke-width="3"/>
+                <ellipse cx="-30" cy="20" rx="22" ry="15" fill="#fcd9b8"/>
+                <ellipse cx="30" cy="20" rx="22" ry="15" fill="#fcd9b8"/>
+                <path d="M-60 -5 L-42 -2 M60 -5 L42 -2 M-32 -40 L-28 -22 M32 -40 L28 -22 M0 -50 L0 -32" stroke="#1a1208" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <circle cx="-22" cy="-5" r="9" fill="#fffbeb"/>
+                <circle cx="22" cy="-5" r="9" fill="#fffbeb"/>
+                <circle cx="-22" cy="-4" r="4.5" fill="#16a34a"/>
+                <circle cx="22" cy="-4" r="4.5" fill="#16a34a"/>
+                <circle cx="-21" cy="-5" r="2" fill="#0a0a0a"/>
+                <circle cx="23" cy="-5" r="2" fill="#0a0a0a"/>
+                <path d="M-8 16 L8 16 L0 26 Z" fill="#0a0a0a"/>
+                <path d="M0 26 L0 35 M0 35 Q-10 43 -18 38 M0 35 Q10 43 18 38" stroke="#0a0a0a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              </g>
+              <g transform="translate(295,180) rotate(-22)">
+                <rect x="0" y="0" width="38" height="9" rx="2" fill="#7c4a1f" stroke="#0a0a0a" stroke-width="1.5"/>
+                <path d="M38 4.5 Q72 -6 86 11 Q78 14 70 11 Q56 11 38 13 Z" fill="#cbd5e1" stroke="#0a0a0a" stroke-width="1.8"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">The Mouli and the Tiger</h2>
+            <p class="card-desc">Inside the Sundarbans, where the honey hunters carry a curved blade called a mouli — and the tigers carry everything else.</p>
+            <div class="card-meta">May 12, 2026 <span class="dot">·</span> Truth Be Told</div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2: Mahabaleshwar's Bee Village -->
+      <article class="card">
+        <a href="articles/mahabaleshwars-bee-village.html">
+          <div class="card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="250" fill="#fef3c7"/>
+              <path d="M0 178 Q80 138 160 168 Q240 128 320 158 Q360 144 400 158 L400 250 L0 250 Z" fill="#86efac"/>
+              <path d="M0 212 Q100 182 200 206 Q300 182 400 200 L400 250 L0 250 Z" fill="#4d7c0f"/>
+              <g transform="translate(50,52)" fill="#f59e0b" stroke="#1a1a1a" stroke-width="2.5">
+                <polygon points="20,0 40,12 40,36 20,48 0,36 0,12"/>
+                <polygon points="60,0 80,12 80,36 60,48 40,36 40,12"/>
+                <polygon points="40,42 60,54 60,78 40,90 20,78 20,54"/>
+                <polygon points="80,42 100,54 100,78 80,90 60,78 60,54"/>
+                <polygon points="60,84 80,96 80,120 60,132 40,120 40,96"/>
+              </g>
+              <g transform="translate(290,100)">
+                <ellipse cx="0" cy="0" rx="34" ry="22" fill="#fbbf24" stroke="#1a1a1a" stroke-width="3"/>
+                <line x1="-14" y1="-14" x2="-14" y2="14" stroke="#1a1a1a" stroke-width="4"/>
+                <line x1="2" y1="-17" x2="2" y2="17" stroke="#1a1a1a" stroke-width="4"/>
+                <line x1="18" y1="-14" x2="18" y2="14" stroke="#1a1a1a" stroke-width="4"/>
+                <ellipse cx="-10" cy="-26" rx="17" ry="11" fill="#fffbeb" stroke="#1a1a1a" stroke-width="2" opacity="0.9"/>
+                <ellipse cx="12" cy="-26" rx="17" ry="11" fill="#fffbeb" stroke="#1a1a1a" stroke-width="2" opacity="0.9"/>
+                <line x1="-28" y1="-7" x2="-38" y2="-22" stroke="#1a1a1a" stroke-width="2.5"/>
+                <line x1="-28" y1="-1" x2="-40" y2="-13" stroke="#1a1a1a" stroke-width="2.5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Mahabaleshwar's Bee Village</h2>
+            <p class="card-desc">Truth Be Told, Part 3 — Inside Manghar, the Western Ghats village that turned beekeeping into a livelihood.</p>
+            <div class="card-meta">May 11, 2026 <span class="dot">·</span> Truth Be Told</div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 3: Is Your Honey Even Honey? -->
+      <article class="card">
+        <a href="articles/is-your-honey-even-honey.html">
+          <div class="card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="250" fill="#fef3c7"/>
+              <rect x="140" y="62" width="120" height="160" rx="10" fill="#fde68a" stroke="#1a1a1a" stroke-width="4"/>
+              <rect x="125" y="38" width="150" height="32" rx="6" fill="#1a1a1a"/>
+              <path d="M144 112 Q200 102 256 112 L256 212 Q256 218 250 218 L150 218 Q144 218 144 212 Z" fill="#f59e0b"/>
+              <path d="M152 114 Q152 132 162 132 Q162 114 162 114 Z" fill="#d97706"/>
+              <rect x="160" y="135" width="80" height="68" fill="#fffbeb" stroke="#1a1a1a" stroke-width="3"/>
+              <text x="200" y="190" text-anchor="middle" font-family="Inter, Helvetica, sans-serif" font-weight="900" font-size="58" fill="#1a1a1a">?</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Is Your Honey Even Honey?</h2>
+            <p class="card-desc">Adulteration, FSSAI rules, and the surprising answer to a question that shouldn't be this hard.</p>
+            <div class="card-meta">May 9, 2026 <span class="dot">·</span> Truth Be Told</div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 4: NMR-tested Isn't One Thing -->
+      <article class="card">
+        <a href="articles/nmr-tested-isnt-one-thing.html">
+          <div class="card-image">
+            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="250" fill="#ccfbf1"/>
+              <text x="200" y="32" text-anchor="middle" font-family="Inter, Helvetica, sans-serif" font-weight="900" font-size="20" fill="#1a1a1a">NMR &#215; 3</text>
+              <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+                <path d="M100 48 L100 192 Q100 218 118 218 Q136 218 136 192 L136 48 Z" fill="#fef3c7"/>
+                <path d="M100 130 L100 192 Q100 218 118 218 Q136 218 136 192 L136 130 Z" fill="#f59e0b"/>
+                <line x1="93" y1="48" x2="143" y2="48" stroke-width="6"/>
+                <path d="M180 48 L180 192 Q180 218 198 218 Q216 218 216 192 L216 48 Z" fill="#fef3c7"/>
+                <path d="M180 112 L180 192 Q180 218 198 218 Q216 218 216 192 L216 112 Z" fill="#14b8a6"/>
+                <line x1="173" y1="48" x2="223" y2="48" stroke-width="6"/>
+                <path d="M260 48 L260 192 Q260 218 278 218 Q296 218 296 192 L296 48 Z" fill="#fef3c7"/>
+                <path d="M260 156 L260 192 Q260 218 278 218 Q296 218 296 192 L296 156 Z" fill="#ef4444"/>
+                <line x1="253" y1="48" x2="303" y2="48" stroke-width="6"/>
+              </g>
+              <circle cx="116" cy="150" r="3.5" fill="#fffbeb" opacity="0.85"/>
+              <circle cx="122" cy="170" r="2.5" fill="#fffbeb" opacity="0.85"/>
+              <circle cx="196" cy="132" r="3.5" fill="#fffbeb" opacity="0.85"/>
+              <circle cx="203" cy="155" r="2.5" fill="#fffbeb" opacity="0.85"/>
+              <circle cx="275" cy="175" r="2.8" fill="#fffbeb" opacity="0.85"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">"NMR-tested" Isn't One Thing. It's Three.</h2>
+            <p class="card-desc">The label says NMR-tested. The label is telling you less than you think.</p>
+            <div class="card-meta">May 6, 2026 <span class="dot">·</span> Truth Be Told</div>
+          </div>
+        </a>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Truth Be Told. Essays on food, labels, and what's really on our plates.</p>
+  </footer>
+
+</body>
+</html>

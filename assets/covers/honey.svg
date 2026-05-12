@@ -1,0 +1,156 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" aria-label="A row of anthropomorphic honey jars on a shelf, each with a different face and label" style="">
+    <rect width="800" height="460" fill="#D4A0A7"></rect>
+    <!-- shelf -->
+    <rect x="20" y="360" width="760" height="14" fill="#1A1A1A"></rect>
+    <rect x="20" y="374" width="760" height="6" fill="#1A1A1A" opacity="0.3"></rect>
+    <!-- back wall vertical lines -->
+    <line x1="120" y1="40" x2="120" y2="360" stroke="#1A1A1A" stroke-width="1.2" opacity="0.25"></line>
+    <line x1="680" y1="40" x2="680" y2="360" stroke="#1A1A1A" stroke-width="1.2" opacity="0.25"></line>
+
+    <!-- jar template: a rounded square body, small lid, label -->
+    <!-- Jar 1: nervous, ₹179, PURE -->
+    <g transform="translate(60,160)">
+      <path d="M10 30 Q10 10 30 10 L70 10 Q90 10 90 30 L90 190 Q90 200 80 200 L20 200 Q10 200 10 190 Z" fill="#E8C27C" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+      <rect x="5" y="0" width="90" height="18" rx="3" fill="#1A1A1A"></rect>
+      <rect x="15" y="70" width="70" height="60" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="50" y="92" text-anchor="middle" font-family="Archivo Black" font-size="11" fill="#1A1A1A">PURE</text>
+      <text x="50" y="110" text-anchor="middle" font-family="Caveat" font-size="13" fill="#1A1A1A">honey</text>
+      <text x="50" y="124" text-anchor="middle" font-family="Caveat" font-size="11" fill="#888">(probably)</text>
+      <!-- face on lid area -->
+      <circle cx="38" cy="45" r="4" fill="#1A1A1A"></circle>
+      <circle cx="62" cy="45" r="4" fill="#1A1A1A"></circle>
+      <path d="M40 58 Q50 62 60 58" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></path>
+      <!-- sweat drop -->
+      <path d="M78 40 Q74 48 78 52 Q82 48 78 40" fill="#7A9BC4" stroke="#1A1A1A" stroke-width="1.5"></path>
+      <!-- price tag -->
+      <line x1="50" y1="-6" x2="50" y2="-20" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <rect x="30" y="-40" width="40" height="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5" transform="rotate(-6 50 -29)"></rect>
+      <text x="50" y="-24" text-anchor="middle" font-family="Caveat" font-size="14" font-weight="700" fill="#1A1A1A" transform="rotate(-6 50 -29)">₹179</text>
+      <!-- shadow -->
+      <ellipse cx="50" cy="210" rx="42" ry="5" fill="#1A1A1A" opacity="0.5"></ellipse>
+    </g>
+
+    <!-- Jar 2: smug, ₹899, ORGANIC -->
+    <g transform="translate(165,150)">
+      <path d="M10 30 Q10 10 30 10 L70 10 Q90 10 90 30 L90 200 Q90 210 80 210 L20 210 Q10 210 10 200 Z" fill="#C89456" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+      <rect x="5" y="0" width="90" height="18" rx="3" fill="#1A1A1A"></rect>
+      <rect x="15" y="75" width="70" height="65" fill="#F5EFE4" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="50" y="100" text-anchor="middle" font-family="Archivo Black" font-size="10" fill="#1A1A1A">ORGANIC</text>
+      <text x="50" y="118" text-anchor="middle" font-family="Caveat" font-size="12" fill="#1A1A1A">artisanal</text>
+      <text x="50" y="132" text-anchor="middle" font-family="Caveat" font-size="11" fill="#888">single-origin</text>
+      <!-- smug half-closed eyes -->
+      <path d="M34 46 Q38 42 42 46" fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"></path>
+      <path d="M58 46 Q62 42 66 46" fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"></path>
+      <path d="M40 58 Q50 55 60 58" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></path>
+      <!-- price tag -->
+      <line x1="50" y1="-6" x2="50" y2="-20" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <rect x="28" y="-40" width="44" height="22" fill="#C7E34A" stroke="#1A1A1A" stroke-width="1.5" transform="rotate(4 50 -29)"></rect>
+      <text x="50" y="-24" text-anchor="middle" font-family="Caveat" font-size="14" font-weight="700" fill="#1A1A1A" transform="rotate(4 50 -29)">₹899</text>
+      <ellipse cx="50" cy="220" rx="42" ry="5" fill="#1A1A1A" opacity="0.5"></ellipse>
+    </g>
+
+    <!-- Jar 3: blank, ₹249, RAW -->
+    <g transform="translate(270,170)">
+      <path d="M10 30 Q10 10 30 10 L70 10 Q90 10 90 30 L90 180 Q90 190 80 190 L20 190 Q10 190 10 180 Z" fill="#D9A868" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+      <rect x="5" y="0" width="90" height="18" rx="3" fill="#1A1A1A"></rect>
+      <rect x="15" y="65" width="70" height="60" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="50" y="88" text-anchor="middle" font-family="Archivo Black" font-size="12" fill="#1A1A1A">RAW</text>
+      <text x="50" y="108" text-anchor="middle" font-family="Caveat" font-size="12" fill="#1A1A1A">unfiltered</text>
+      <!-- blank dots -->
+      <circle cx="38" cy="45" r="3" fill="#1A1A1A"></circle>
+      <circle cx="62" cy="45" r="3" fill="#1A1A1A"></circle>
+      <line x1="42" y1="58" x2="58" y2="58" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="50" y1="-6" x2="50" y2="-20" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <rect x="30" y="-40" width="40" height="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5" transform="rotate(-3 50 -29)"></rect>
+      <text x="50" y="-24" text-anchor="middle" font-family="Caveat" font-size="14" font-weight="700" fill="#1A1A1A" transform="rotate(-3 50 -29)">₹249</text>
+      <ellipse cx="50" cy="200" rx="42" ry="5" fill="#1A1A1A" opacity="0.5"></ellipse>
+    </g>
+
+    <!-- Jar 4: sweating profusely, ₹499, NMR-TESTED -->
+    <g transform="translate(375,155)">
+      <path d="M10 30 Q10 10 30 10 L70 10 Q90 10 90 30 L90 195 Q90 205 80 205 L20 205 Q10 205 10 195 Z" fill="#E8B05A" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+      <rect x="5" y="0" width="90" height="18" rx="3" fill="#1A1A1A"></rect>
+      <rect x="13" y="70" width="74" height="62" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="50" y="92" text-anchor="middle" font-family="Archivo Black" font-size="10" fill="#1A1A1A">NMR-TESTED*</text>
+      <text x="50" y="110" text-anchor="middle" font-family="Caveat" font-size="11" fill="#888">*by us, in-house</text>
+      <text x="50" y="124" text-anchor="middle" font-family="Caveat" font-size="11" fill="#1A1A1A">trust us</text>
+      <circle cx="38" cy="45" r="4" fill="#1A1A1A"></circle>
+      <circle cx="62" cy="45" r="4" fill="#1A1A1A"></circle>
+      <path d="M39 44 L37 42 M39 46 L37 48 M65 44 L67 42 M65 46 L67 48" stroke="#1A1A1A" stroke-width="1.2"></path>
+      <path d="M40 60 Q50 54 60 60" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></path>
+      <!-- multiple sweat drops -->
+      <path d="M22 40 Q18 48 22 52 Q26 48 22 40" fill="#7A9BC4" stroke="#1A1A1A" stroke-width="1.5"></path>
+      <path d="M78 50 Q74 58 78 62 Q82 58 78 50" fill="#7A9BC4" stroke="#1A1A1A" stroke-width="1.5"></path>
+      <line x1="50" y1="-6" x2="50" y2="-20" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <rect x="28" y="-40" width="44" height="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5" transform="rotate(5 50 -29)"></rect>
+      <text x="50" y="-24" text-anchor="middle" font-family="Caveat" font-size="14" font-weight="700" fill="#1A1A1A" transform="rotate(5 50 -29)">₹499</text>
+      <ellipse cx="50" cy="215" rx="42" ry="5" fill="#1A1A1A" opacity="0.5"></ellipse>
+    </g>
+
+    <!-- Jar 5: innocent wide eyes, ₹699, NATURAL -->
+    <g transform="translate(480,165)">
+      <path d="M10 30 Q10 10 30 10 L70 10 Q90 10 90 30 L90 185 Q90 195 80 195 L20 195 Q10 195 10 185 Z" fill="#CC9958" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+      <rect x="5" y="0" width="90" height="18" rx="3" fill="#1A1A1A"></rect>
+      <rect x="15" y="70" width="70" height="58" fill="#F5EFE4" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="50" y="92" text-anchor="middle" font-family="Archivo Black" font-size="11" fill="#1A1A1A">NATURAL</text>
+      <text x="50" y="110" text-anchor="middle" font-family="Caveat" font-size="12" fill="#1A1A1A">from nature!</text>
+      <!-- innocent eyes -->
+      <circle cx="38" cy="46" r="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></circle>
+      <circle cx="62" cy="46" r="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></circle>
+      <circle cx="38" cy="46" r="2.5" fill="#1A1A1A"></circle>
+      <circle cx="62" cy="46" r="2.5" fill="#1A1A1A"></circle>
+      <path d="M44 60 Q50 64 56 60" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></path>
+      <line x1="50" y1="-6" x2="50" y2="-20" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <rect x="30" y="-40" width="40" height="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5" transform="rotate(3 50 -29)"></rect>
+      <text x="50" y="-24" text-anchor="middle" font-family="Caveat" font-size="14" font-weight="700" fill="#1A1A1A" transform="rotate(3 50 -29)">₹699</text>
+      <ellipse cx="50" cy="205" rx="42" ry="5" fill="#1A1A1A" opacity="0.5"></ellipse>
+    </g>
+
+    <!-- Jar 6: sneaky side-eye, ₹179, FARM FRESH -->
+    <g transform="translate(585,158)">
+      <path d="M10 30 Q10 10 30 10 L70 10 Q90 10 90 30 L90 195 Q90 205 80 205 L20 205 Q10 205 10 195 Z" fill="#D4A866" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+      <rect x="5" y="0" width="90" height="18" rx="3" fill="#1A1A1A"></rect>
+      <rect x="13" y="72" width="74" height="60" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="50" y="94" text-anchor="middle" font-family="Archivo Black" font-size="10" fill="#1A1A1A">FARM FRESH</text>
+      <text x="50" y="112" text-anchor="middle" font-family="Caveat" font-size="12" fill="#1A1A1A">from a farm</text>
+      <text x="50" y="126" text-anchor="middle" font-family="Caveat" font-size="10" fill="#888">(somewhere)</text>
+      <!-- side-eye -->
+      <ellipse cx="38" cy="46" rx="6" ry="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></ellipse>
+      <ellipse cx="62" cy="46" rx="6" ry="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></ellipse>
+      <circle cx="41" cy="46" r="2.2" fill="#1A1A1A"></circle>
+      <circle cx="65" cy="46" r="2.2" fill="#1A1A1A"></circle>
+      <path d="M40 60 L60 60" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"></path>
+      <line x1="50" y1="-6" x2="50" y2="-20" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <rect x="30" y="-40" width="40" height="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5" transform="rotate(-5 50 -29)"></rect>
+      <text x="50" y="-24" text-anchor="middle" font-family="Caveat" font-size="14" font-weight="700" fill="#1A1A1A" transform="rotate(-5 50 -29)">₹179</text>
+      <ellipse cx="50" cy="215" rx="42" ry="5" fill="#1A1A1A" opacity="0.5"></ellipse>
+    </g>
+
+    <!-- Jar 7: confident big grin, ₹349, 100% PURE -->
+    <g transform="translate(690,168)">
+      <path d="M10 30 Q10 10 30 10 L70 10 Q90 10 90 30 L90 180 Q90 190 80 190 L20 190 Q10 190 10 180 Z" fill="#BD8A4A" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"></path>
+      <rect x="5" y="0" width="90" height="18" rx="3" fill="#1A1A1A"></rect>
+      <rect x="13" y="68" width="74" height="58" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"></rect>
+      <text x="50" y="89" text-anchor="middle" font-family="Archivo Black" font-size="12" fill="#1A1A1A">100% PURE</text>
+      <text x="50" y="107" text-anchor="middle" font-family="Caveat" font-size="11" fill="#1A1A1A">definitely.</text>
+      <circle cx="38" cy="46" r="4" fill="#1A1A1A"></circle>
+      <circle cx="62" cy="46" r="4" fill="#1A1A1A"></circle>
+      <path d="M34 58 Q50 72 66 58 L62 62 L58 60 L54 62 L50 60 L46 62 L42 60 L38 62 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round"></path>
+      <line x1="50" y1="-6" x2="50" y2="-20" stroke="#1A1A1A" stroke-width="1.5"></line>
+      <rect x="30" y="-40" width="40" height="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5" transform="rotate(6 50 -29)"></rect>
+      <text x="50" y="-24" text-anchor="middle" font-family="Caveat" font-size="14" font-weight="700" fill="#1A1A1A" transform="rotate(6 50 -29)">₹349</text>
+      <ellipse cx="50" cy="200" rx="42" ry="5" fill="#1A1A1A" opacity="0.5"></ellipse>
+    </g>
+
+    <!-- floating caption sketch -->
+    <g font-family="Caveat" font-size="20" fill="#1A1A1A">
+      <path d="M60 90 Q120 60 200 80" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="4 4"></path>
+      <text x="80" y="55">the shelf</text>
+    </g>
+
+    <!-- wordmark bottom left -->
+    <g transform="translate(26,418)">
+      <rect x="0" y="0" width="188" height="30" fill="#C7E34A" stroke="#1A1A1A" stroke-width="2" rx="4"></rect>
+      <text x="10" y="22" font-family="Fredoka" font-weight="700" font-size="20" fill="#1A1A1A">The Honest Plate</text>
+    </g>
+  </svg>
